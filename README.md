@@ -1,6 +1,6 @@
 # CyberTruckChallenge19
 
-Android crackme used for the CyberTruck Challenge 2019 (Detroit USA). Further info at https://www.cybertruckchallenge.org
+Android security workshop taught at the CyberTruck Challenge 2019 (Detroit USA). Further info at https://www.cybertruckchallenge.org
 
 ## Description
 
@@ -46,5 +46,9 @@ It is required to have an Android device either emulated or physical. During the
 
 - `100pts`: Get the secret generated at runtime to unlock the carid=3. Security by obscurity is not a great design. Use real crypto! (hint: check the length when summitting the secret!)
 
+
+### Contact
+
+Eduardo Novella <enovella@nowsecure.com>
 
 
