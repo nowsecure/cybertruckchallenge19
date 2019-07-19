@@ -1,0 +1,40 @@
+
+
+Tools
+=======
+Jadx-gui
+	- latest unstable build: https://bintray.com/skylot/jadx/unstable/_latestVersion#files
+
+Frida
+	- sudo pip3 install frida-tools frida --upgrade
+
+Radare2
+	- Download repo and run: $ sys/install.sh
+
+Radare2 IO plugins
+	- $ sudo apt install -y make gcc libzip-dev nodejs npm curl pkg-config git
+	- $ r2pm init && r2pm -ci r2frida && r2pm -ci r2dec
+
+Android Studio (latest)
+	- Android SDKs: Android 8.1
+	- Android tools: Android emulator, SDK tools
+	- TODO- I will share with you a Pixel 2XL x86 image (+-8GB) soon
+	- TODO- To be located @ $USER/.android/avd/Pixel_2_XL_API_27.avd + .ini file
+
+APKiD
+	- https://github.com/rednaga/APKiD
+
+Apktool
+	- https://ibotpeaches.github.io/Apktool/install/
+
+Ghidra (latest)
+	- https://ghidra-sre.org/ghidra_9.0.2_PUBLIC_20190403.zip
+
+
+
+Resources to share with curious students before the cybertruck
+==============================================================
+[1].- https://maddiestone.github.io/AndroidAppRE/
+[2].- https://mobisec.reyammer.io/slides
+[3].- https://www.frida.re/docs/android/
+

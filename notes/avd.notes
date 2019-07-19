@@ -1,0 +1,9 @@
+sudo apt install qemu-kvm
+sudo apt install cpu-checker
+
+[00:03 edu@NowSecure ~] >  kvm-ok
+INFO: /dev/kvm exists
+KVM acceleration can be used
+
+sudo adduser edu kvm
+sudo chown edu -R /dev/kvm

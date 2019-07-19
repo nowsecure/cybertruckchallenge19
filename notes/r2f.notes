@@ -1,0 +1,169 @@
+>  adb shell
+generic_x86:/ $ su
+generic_x86:/data/local/tmp # ./frida-server -D &
+
+
+[01:40 edu@NowSecure cybertruck] >  r2 frida://spawn/usb//org.nowsecure.cybertruck
+ -- Move between your search hits in visual mode using the 'f' and 'F' keys
+[0x00000000]> \. ./student.js
+[0x00000000]> \dc
+resumed spawned process.
+[0x00000000]> [Java] Loading dynamic library => native-lib
+[*] libnative-lib.so baseaddress: 0xcaf79000
+exports->lib:libnative-lib.so name:Java_org_nowsecure_cybertruck_MainActivity_init addr:0xcaf795b0 offset:0x5b0 type:function
+
+[0x00000000]> \il~libnative-lib
+0xcaf79000 libnative-lib.so
+
+[0x00000000]> .\iE* libnative-lib.so
+[0x00000000]> \iE libnative-lib.so
+0xcaf795b0 f Java_org_nowsecure_cybertruck_MainActivity_init
+[0x00000000]> s sym.fun.Java_org_nowsecure_cybertruck_MainActivity_init
+
+[0xcaf795b0]> x
+- offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
+0xcaf795b0  5589 e553 5756 83ec 6ce8 0000 0000 5881  U..SWV..l.....X.
+0xcaf795c0  c01e 1a00 008b 4d0c 8b55 0865 8b35 1400  ......M..U.e.5..
+0xcaf795d0  0000 8975 f083 ec10 8db0 48e7 ffff 89e7  ...u......H.....
+0xcaf795e0  8977 088d b034 e7ff ff89 7704 c707 0200  .w...4....w.....
+0xcaf795f0  0000 89c3 8945 9c89 4d98 8955 94e8 9efe  .....E..M..U....
+0xcaf79600  ffff 83c4 10c7 45ec 6572 7333 c745 e85f  ......E.ers3.E._
+0xcaf79610  7233 76c7 45e4 725f 546f c745 e034 7264  r3v.E.r_To.E.4rd
+0xcaf79620  33c7 45dc 3173 5f68 c745 d830 6433 5fc7  3.E.1s_h.E.0d3_.
+0xcaf79630  45d4 7665 5f63 c745 d04e 6174 69c7 45cc  E.ve_c.E.Nati.E.
+0xcaf79640  561c 5717 c745 c83d 4357 12c7 45c4 1719  V.W..E.=CW..E...
+0xcaf79650  641d c745 c000 0b17 71c7 45bc 4532 331f  d..E....q.E.E23.
+0xcaf79660  c745 b814 2946 7bc7 45b4 1255 6f11 c745  .E..)F{.E..Uo..E
+0xcaf79670  b02c 0017 0283 ec10 89e1 8d55 d089 118b  .,.........U....
+0xcaf79680  5d9c 8945 90e8 26fe ffff 83c4 1089 45ac  ]..E..&.......E.
+0xcaf79690  8b45 ac89 e189 4da4 89c1 83c1 0f83 e1f0  .E....M.........
+0xcaf796a0  89e2 29ca 89d4 8945 a0c7 45a8 0000 0000  ..)....E..E.....
+[0xcaf795b0]> af
+[0xcaf795b0]> pdf
+┌ (fcn) sym.fun.Java_org_nowsecure_cybertruck_MainActivity_init 344
+│   sym.fun.Java_org_nowsecure_cybertruck_MainActivity_init (int32_t arg1, int32_t arg2, int32_t arg_8h, int32_t arg_ch, int32_t arg_30h, int32_t arg_50h, int32_t arg_5f5ef465h);
+│           ; var int32_t var_74h @ rbp-0x74
+│           ; var int32_t var_70h @ rbp-0x70
+│           ; var int32_t var_6ch @ rbp-0x6c
+│           ; var int32_t var_68h @ rbp-0x68
+│           ; var int32_t var_64h @ rbp-0x64
+│           ; var int32_t var_60h @ rbp-0x60
+│           ; var int32_t var_5ch @ rbp-0x5c
+│           ; var int32_t var_58h @ rbp-0x58
+│           ; var int32_t var_54h @ rbp-0x54
+│           ; var int32_t var_50h @ rbp-0x50
+│           ; var int32_t var_4ch @ rbp-0x4c
+│           ; var int32_t var_48h @ rbp-0x48
+│           ; var int32_t var_44h @ rbp-0x44
+│           ; var int32_t var_40h @ rbp-0x40
+│           ; var int32_t var_3ch @ rbp-0x3c
+│           ; var int32_t var_38h @ rbp-0x38
+│           ; var int32_t var_34h @ rbp-0x34
+│           ; var int32_t var_30h @ rbp-0x30
+│           ; var int32_t var_2ch @ rbp-0x2c
+│           ; var int32_t var_28h @ rbp-0x28
+│           ; var int32_t var_24h @ rbp-0x24
+│           ; var int32_t var_20h @ rbp-0x20
+│           ; var int32_t var_1ch @ rbp-0x1c
+│           ; var int32_t var_18h @ rbp-0x18
+│           ; var int32_t var_14h @ rbp-0x14
+│           ; var int32_t var_10h @ rbp-0x10
+│           ; arg int32_t arg_8h @ rbp+0x8
+│           ; arg int32_t arg_ch @ rbp+0xc
+│           ; arg int32_t arg_30h @ rbp+0x30
+│           ; arg int32_t arg_50h @ rbp+0x50
+│           ; arg int32_t arg_5f5ef465h @ rbp+0x5f5ef465
+│           ; arg int32_t arg1 @ rdi
+│           ; arg int32_t arg2 @ rsi
+│           0xcaf795b0      55             push rbp
+│           0xcaf795b1      89e5           mov ebp, esp
+│           0xcaf795b3      53             push rbx
+│           0xcaf795b4      57             push rdi                    ; arg1
+│           0xcaf795b5      56             push rsi                    ; arg2
+│           0xcaf795b6      83ec6c         sub esp, 0x6c               ; 'l'
+│           0xcaf795b9      e800000000     call 0xcaf795be
+│           ; CALL XREF from sym.fun.Java_org_nowsecure_cybertruck_MainActivity_init (0xcaf795b9)
+│           0xcaf795be      58             pop rax
+│           0xcaf795bf      81c01e1a0000   add eax, 0x1a1e
+│           0xcaf795c5      8b4d0c         mov ecx, dword [arg_ch]     ; [0xc:4]=-1 ; 12
+│           0xcaf795c8      8b5508         mov edx, dword [arg_8h]     ; [0x8:4]=-1 ; 8
+│           0xcaf795cb      658b35140000.  mov esi, dword gs:[0xcaf795e6] ; MOV esi = [0xcaf795e6] = 0x89ffffe7
+│                                                                      ; [0xcaf795e6:4]=0x89ffffe7
+│           0xcaf795d2      8975f0         mov dword [var_10h], esi
+│           0xcaf795d5      83ec10         sub esp, 0x10
+│           0xcaf795d8      8db048e7ffff   lea esi, [rax - 0x18b8]
+│           0xcaf795de      89e7           mov edi, esp
+│           0xcaf795e0      897708         mov dword [rdi + 8], esi
+│           0xcaf795e3      8db034e7ffff   lea esi, [rax - 0x18cc]
+│           0xcaf795e9      897704         mov dword [rdi + 4], esi
+│           0xcaf795ec      c70702000000   mov dword [rdi], 2
+│           0xcaf795f2      89c3           mov ebx, eax
+│           0xcaf795f4      89459c         mov dword [var_64h], eax
+│           0xcaf795f7      894d98         mov dword [var_68h], ecx
+│           0xcaf795fa      895594         mov dword [var_6ch], edx
+│           0xcaf795fd      e89efeffff     call 0xcaf794a0
+│           0xcaf79602      83c410         add esp, 0x10
+│           0xcaf79605      c745ec657273.  mov dword [var_14h], 0x33737265 ; 'ers3'
+│           0xcaf7960c      c745e85f7233.  mov dword [var_18h], 0x7633725f ; '_r3v'
+│           0xcaf79613      c745e4725f54.  mov dword [var_1ch], 0x6f545f72 ; 'r_To'
+│           0xcaf7961a      c745e0347264.  mov dword [var_20h], 0x33647234 ; '4rd3'
+│           0xcaf79621      c745dc31735f.  mov dword [var_24h], 0x685f7331 ; '1s_h'
+│           0xcaf79628      c745d8306433.  mov dword [var_28h], 0x5f336430 ; '0d3_'
+│           0xcaf7962f      c745d476655f.  mov dword [var_2ch], 0x635f6576 ; 've_c'
+│           0xcaf79636      c745d04e6174.  mov dword [var_30h], 0x6974614e ; 'Nati'
+│           0xcaf7963d      c745cc561c57.  mov dword [var_34h], 0x17571c56
+│           0xcaf79644      c745c83d4357.  mov dword [var_38h], 0x1257433d
+│           0xcaf7964b      c745c4171964.  mov dword [var_3ch], 0x1d641917
+│           0xcaf79652      c745c0000b17.  mov dword [var_40h], 0x71170b00
+│           0xcaf79659      c745bc453233.  mov dword [var_44h], 0x1f333245
+│           0xcaf79660      c745b8142946.  mov dword [var_48h], 0x7b462914
+│           0xcaf79667      c745b412556f.  mov dword [var_4ch], 0x116f5512
+│           0xcaf7966e      c745b02c0017.  mov dword [var_50h], 0x217002c ; ','
+│           0xcaf79675      83ec10         sub esp, 0x10
+│           0xcaf79678      89e1           mov ecx, esp
+│           0xcaf7967a      8d55d0         lea edx, [var_30h]
+│           0xcaf7967d      8911           mov dword [rcx], edx
+│           0xcaf7967f      8b5d9c         mov ebx, dword [var_64h]
+│           0xcaf79682      894590         mov dword [var_70h], eax
+│           0xcaf79685      e826feffff     call 0xcaf794b0
+│           0xcaf7968a      83c410         add esp, 0x10
+│           0xcaf7968d      8945ac         mov dword [var_54h], eax
+│           0xcaf79690      8b45ac         mov eax, dword [var_54h]
+│           0xcaf79693      89e1           mov ecx, esp
+│           0xcaf79695      894da4         mov dword [var_5ch], ecx
+│           0xcaf79698      89c1           mov ecx, eax
+│           0xcaf7969a      83c10f         add ecx, 0xf
+│           0xcaf7969d      83e1f0         and ecx, 0xfffffff0
+│           0xcaf796a0      89e2           mov edx, esp
+│           0xcaf796a2      29ca           sub edx, ecx
+│           0xcaf796a4      89d4           mov esp, edx
+│           0xcaf796a6      8945a0         mov dword [var_60h], eax
+│           0xcaf796a9      c745a8000000.  mov dword [var_58h], 0
+│           0xcaf796b0      89558c         mov dword [var_74h], edx
+│           ; CODE XREF from sym.fun.Java_org_nowsecure_cybertruck_MainActivity_init (0xcaf796e5)
+│       ┌─> 0xcaf796b3      8b45a8         mov eax, dword [var_58h]
+│       ╎   0xcaf796b6      3b45ac         cmp eax, dword [var_54h]
+│      ┌──< 0xcaf796b9      0f8d2b000000   jge 0xcaf796ea
+│      │╎   0xcaf796bf      8b45a8         mov eax, dword [var_58h]
+│      │╎   0xcaf796c2      0fbe4405d0     movsx eax, byte [rbp + rax - 0x30]
+│      │╎   0xcaf796c7      8b4da8         mov ecx, dword [var_58h]
+│      │╎   0xcaf796ca      0fbe4c0db0     movsx ecx, byte [rbp + rcx - 0x50]
+│      │╎   0xcaf796cf      31c8           xor eax, ecx
+│      │╎   0xcaf796d1      88c2           mov dl, al
+│      │╎   0xcaf796d3      8b45a8         mov eax, dword [var_58h]
+│      │╎   0xcaf796d6      8b4d8c         mov ecx, dword [var_74h]
+│      │╎   0xcaf796d9      881401         mov byte [rcx + rax], dl
+│      │╎   0xcaf796dc      8b45a8         mov eax, dword [var_58h]
+│      │╎   0xcaf796df      83c001         add eax, 1
+│      │╎   0xcaf796e2      8945a8         mov dword [var_58h], eax
+│      │└─< 0xcaf796e5      e9c9ffffff     jmp 0xcaf796b3
+│      └──> 0xcaf796ea      8b45a4         mov eax, dword [var_5ch]
+│           0xcaf796ed      89c4           mov esp, eax
+│           0xcaf796ef      65a114000000.  movabs eax, dword gs:[0x39f04d8b00000014] ; [0x39f04d8b00000014:4]=-1 ; 4174922113968242708
+│           0xcaf796f9      c80f8508       enter 0xffffffffffff850f, 8
+│           0xcaf796fd      0000           add byte [rax], al
+│           0xcaf796ff      008d65f45e5f   add byte [arg_5f5ef465h], cl
+│           0xcaf79705      5b             pop rbx
+│           0xcaf79706      5d             pop rbp
+└           0xcaf79707      c3             ret
+[0xcaf795b0]>
