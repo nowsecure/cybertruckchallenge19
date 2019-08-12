@@ -40,7 +40,7 @@ It is required to have an Android device either emulated or physical. During the
 - `100pts`: There is a token generated at runtime to unlock the carid=2. Can you get it? (flag must be summitted in hexa all lowercase)
 
 
-###  Challenge3 to unlock. "Mr Truck: Unlock me Baby!"
+###  Challenge3 to unlock car3. "Mr Truck: Unlock me Baby!"
 
 - `50pts`: There is an interesting string in the native code. Can you catch it?
 
