@@ -41,8 +41,6 @@ First of all, we start Frida server in our Android x86 emulator or physical mobi
 [edu@NowSecure solutions] > adb shell
 jasmine_sprout:/ $ su
 jasmine_sprout:/ # cd  /data/local/tmp
-jasmine_sprout:/data/local/tmp # ./fr
-frida-server                        frida-server-12.6.8-android-arm64
 jasmine_sprout:/data/local/tmp # ./frida-server -D
 ```
 
