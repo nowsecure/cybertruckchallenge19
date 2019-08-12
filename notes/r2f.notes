@@ -1,6 +1,6 @@
 >  adb shell
 generic_x86:/ $ su
-generic_x86:/data/local/tmp # ./frida-server -D &
+generic_x86:/data/local/tmp # ./frida-server -D
 
 
 [01:40 edu@NowSecure cybertruck] >  r2 frida://spawn/usb//org.nowsecure.cybertruck
