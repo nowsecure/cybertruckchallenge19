@@ -25,7 +25,7 @@ There is a token generated at runtime to unlock the carid=2. Can you get it? (fl
 	100 - dynamic = 512100f7cc50c76906d23181aff63f0d642b3d947f75d360b6b15447540e4f16
 
 
->> Challenge3 to unlock
+>> Challenge3 to unlock car3
 Title: "Mr Truck: Unlock me Baby!"
 
 There is an interesting string in the native code. Can you catch it?
