@@ -43,8 +43,7 @@ jasmine_sprout:/ $ su
 jasmine_sprout:/ # cd  /data/local/tmp
 jasmine_sprout:/data/local/tmp # ./fr
 frida-server                        frida-server-12.6.8-android-arm64
-jasmine_sprout:/data/local/tmp # ./frida-server -D &
-[1] 13163
+jasmine_sprout:/data/local/tmp # ./frida-server -D
 ```
 
 Secondly, we can inject code in the target by spawing the process via r2frida and extract all the static and dynamic flags:
