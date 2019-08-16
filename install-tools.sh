@@ -1,7 +1,7 @@
 
 sudo apt update -y
 sudo apt install -y make gcc libzip-dev nodejs npm curl pkg-config git
-sudo apt install -y pip3 terminator --upgrade
+sudo apt install -y python3-pip terminator --upgrade
 sudo pip3 install frida-tools frida --upgrade
 
 
