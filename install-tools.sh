@@ -8,17 +8,17 @@ sudo pip3 install frida-tools frida --upgrade
 mkdir ~/droidsec
 
 cd ~/droidsec
-git clone git@github.com:radare/radare2.git
+git clone https://github.com/radare/radare2.git
 cd radare2
 sys/install.sh
 
 cd ~/droidsec
-git clone git@github.com:enovella/re-scripts.git
+git clone https://github.com/enovella/re-scripts.git
 cd re-scripts/droid/jadx-installer
 python3 dwn_jadx.py
 
 cd ~/droidsec
-git clone git@github.com:bkerler/ghidra_installer.git
+git clone https://github.com/bkerler/ghidra_installer.git
 cd ghidra_installer
 ./install-ghidra.sh
 
