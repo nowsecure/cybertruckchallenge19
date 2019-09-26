@@ -51,4 +51,7 @@ It is required to have an Android device either emulated or physical. During the
 
 Eduardo Novella <enovella@nowsecure.com>
 
+### Public Write-ups
+
+- [verso.se](https://www.verso.re/posts/cybertruck/) (by Joan Calabrés)
 
