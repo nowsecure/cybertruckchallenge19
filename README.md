@@ -54,4 +54,5 @@ Eduardo Novella <enovella@nowsecure.com>
 ### Public Write-ups
 
 - [verso.se](https://www.verso.re/posts/cybertruck/) (by Joan Calabrés)
+- [bugbountywriteup](https://medium.com/bugbountywriteup/cybertruck-challenge-2019-android-ctf-e39c7f796530) (by Harshit Maheshwari)
 
