@@ -23,4 +23,4 @@ cd ghidra_installer
 ./install-ghidra.sh
 
 
-r2pm init && r2pm -ci r2frida && r2pm -ci r2dec
+r2pm init && r2pm -ci r2frida && r2pm -ci r2dec && r2pm -ci r2ghidra-dec
