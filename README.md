@@ -30,21 +30,21 @@ It is required to have an Android device either emulated or physical. During the
 
 - `50pts`: There is a secret used to create a DES key. Can you tell me which one?
 
-- `100pts`: There is a token generated at runtime to unlock the carid=1. Can you get it? (flag must be summitted in hexa all lowercase)
+- `100pts`: There is a token generated at runtime to unlock the carid=1. Can you get it? (flag must be submitted in hexa all lowercase)
 
 
 ### Challenge2 to unlock car2: "AES key: Your Cell Mobile Is Your Key"
 
 - `50pts`: This challenge has been obfuscated with ProGuard, therefore you will not recover the AES key.
 
-- `100pts`: There is a token generated at runtime to unlock the carid=2. Can you get it? (flag must be summitted in hexa all lowercase)
+- `100pts`: There is a token generated at runtime to unlock the carid=2. Can you get it? (flag must be submitted in hexa all lowercase)
 
 
 ###  Challenge3 to unlock car3. "Mr Truck: Unlock me Baby!"
 
 - `50pts`: There is an interesting string in the native code. Can you catch it?
 
-- `100pts`: Get the secret generated at runtime to unlock the carid=3. Security by obscurity is not a great design. Use real crypto! (hint: check the length when summitting the secret!)
+- `100pts`: Get the secret generated at runtime to unlock the carid=3. Security by obscurity is not a great design. Use real crypto! (hint: check the length when submitting the secret!)
 
 
 ### Contact
