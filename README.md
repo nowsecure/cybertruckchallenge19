@@ -56,3 +56,5 @@ Eduardo Novella <enovella@nowsecure.com>
 - [verso.se](https://www.verso.re/posts/cybertruck/) (by [Joan Calabrés](https://twitter.com/jcalabres22))
 - [bugbountywriteup](https://medium.com/bugbountywriteup/cybertruck-challenge-2019-android-ctf-e39c7f796530) (by [Harshit Maheshwari](https://twitter.com/fake_batman_))
 - [GitHub](https://github.com/user1342/CyberTruck-2019-Android-CTF-Writeup) (By [James Stevenson](https://twitter.com/_JamesStevenson))
+- [nibarius](https://nibarius.github.io/learning-frida/2020/08/17/cybertruckchallange19)
+- [nibarius (native layer)](https://nibarius.github.io/learning-frida/2020/08/22/cybertruckchallange19-revisited)
